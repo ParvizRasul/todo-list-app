@@ -5,6 +5,7 @@ import App from "../App.jsx";
 import Footer from "./Footer.jsx";
 
 function TaskList({
+  task,
   tasks,
   removeTask,
   crossOverTask,
@@ -12,7 +13,9 @@ function TaskList({
   handleActive,
   spanHandler,
   spanRemoved,
-  filterTasks
+  filterTasks,
+  deleteTaskApi,
+  fetchTasks
 }) {
   return (
     <div>
@@ -27,6 +30,8 @@ function TaskList({
               handleActive={handleActive}
               spanHandler={spanHandler}
               spanRemoved={spanRemoved}
+              deleteTaskApi={deleteTaskApi}
+              fetchTasks={fetchTasks}
             />
           </li>
         )))}
